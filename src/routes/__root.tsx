@@ -78,13 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Energetische Heilsitzungen, Traumaauflösung, Ahnenheilung und Karmaauflösung. Ganzheitliche Begleitung – körperlich, geistig, seelisch.",
       },
-      { property: "og:title", content: "Maria Fabijenna – Energetische Heilerin" },
+      { property: "og:title", content: "Maria Fabijenna – Energetische Heilerin & Traumaauflösung" },
       {
         property: "og:description",
         content: "Ganzheitliche energetische Heilarbeit. Sanft. Tief. Wirksam.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Maria Fabijenna – Energetische Heilerin & Traumaauflösung" },
+      { name: "description", content: "Elegant Onepage Design builds professional, minimalist websites with gold and turquoise accents." },
+      { property: "og:description", content: "Elegant Onepage Design builds professional, minimalist websites with gold and turquoise accents." },
+      { name: "twitter:description", content: "Elegant Onepage Design builds professional, minimalist websites with gold and turquoise accents." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/beccb2f8-f755-4682-a58b-df6a8536d041/id-preview-1d9d8fc3--24ebe212-715e-4bbb-a1a8-1c7c6533678c.lovable.app-1779642292969.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/beccb2f8-f755-4682-a58b-df6a8536d041/id-preview-1d9d8fc3--24ebe212-715e-4bbb-a1a8-1c7c6533678c.lovable.app-1779642292969.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
