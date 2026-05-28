@@ -130,6 +130,25 @@ export const services: Service[] = [
   },
 ];
 
+export const vortragService: Service = {
+  id: "vortraege",
+  title: "Vorträge & Keynotes",
+  short:
+    "Inspirierende Vorträge zu energetischer Heilarbeit, Bewusstsein und Transformation — für Unternehmen, Kongresse und private Veranstaltungen.",
+  duration: "Individuell",
+  price: "Preis auf Anfrage",
+  long: [
+    "Ich halte Vorträge und Keynotes zu Themen rund um energetische Heilarbeit, ganzheitliches Bewusstsein, Traumaintegration und persönliche Transformation — zugeschnitten auf Ihr Publikum und Format.",
+    "Ob Unternehmens-Event, Kongress, Retreat oder geschlossene Gesellschaft: Ich gestalte einen Vortrag, der berührt, klärt und einen bleibenden Impuls hinterlässt. Formate von 30 Minuten bis hin zu mehrstündigen Workshops sind möglich.",
+    "Senden Sie mir gerne eine unverbindliche Anfrage mit Anlass, Datum, Ort und gewünschter Dauer — ich erstelle Ihnen ein individuelles Angebot.",
+  ],
+  benefits: [
+    "Maßgeschneiderter Inhalt für Ihr Publikum",
+    "Persönliches Vorgespräch inklusive",
+    "Online, hybrid oder vor Ort",
+  ],
+};
+
 export interface Testimonial {
   name: string;
   location: string;
