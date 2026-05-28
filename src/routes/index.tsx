@@ -15,6 +15,12 @@ import mountainsMist from "@/assets/mountains-mist.jpg";
 import mariaPortrait from "@/assets/maria-portrait.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    links: [
+      { rel: "preload", as: "image", href: heroLake, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: mariaPortrait, fetchpriority: "low" },
+    ],
+  }),
   component: Index,
 });
 
