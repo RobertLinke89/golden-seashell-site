@@ -39,6 +39,15 @@ function Index() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <img
+          src={heroLake}
+          alt=""
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover -z-10 opacity-0"
+        />
         <div
           className="absolute inset-0 parallax-bg"
           style={{
