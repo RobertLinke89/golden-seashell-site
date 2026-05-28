@@ -112,6 +112,7 @@ function Index() {
               height={1024}
               className="w-full aspect-[4/5] object-cover rounded-sm shadow-[var(--shadow-elegant)]"
               loading="lazy"
+              decoding="async"
             />
           </motion.div>
 
