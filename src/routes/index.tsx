@@ -6,7 +6,7 @@ import { ParallaxSection } from "@/components/site/Parallax";
 import { ServiceDialog } from "@/components/site/ServiceDialog";
 import { BookingDialog } from "@/components/site/BookingDialog";
 import { TestimonialMarquee } from "@/components/site/TestimonialMarquee";
-import { services, testimonials, type Service } from "@/components/site/data";
+import { services, testimonials, vortragService, type Service } from "@/components/site/data";
 
 import heroLake from "@/assets/hero-lake.jpg";
 import forestLight from "@/assets/forest-light.jpg";
