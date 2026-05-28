@@ -219,6 +219,47 @@ function Index() {
                 </div>
               </motion.button>
             ))}
+
+            {/* HIGHLIGHT: Vorträge & Keynotes – spans 2 columns on lg */}
+            <motion.button
+              onClick={() => setOpenService(vortragService)}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.15 }}
+              className="group relative sm:col-span-1 lg:col-span-2 p-10 text-left flex flex-col justify-between overflow-hidden bg-gradient-to-br from-[oklch(0.97_0.02_85)] via-[oklch(0.95_0.04_90)] to-[oklch(0.92_0.06_195)]/40 hover:from-[oklch(0.96_0.03_85)] hover:to-[oklch(0.90_0.08_195)]/50 transition-all duration-700"
+            >
+              <div className="absolute top-0 right-0 px-4 py-1.5 bg-gold text-[10px] uppercase tracking-[0.22em] text-background">
+                Highlight
+              </div>
+              <div>
+                <div className="flex items-start justify-between mb-4 mt-2">
+                  <span className="font-display text-gold text-2xl">08</span>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mr-20">
+                    {vortragService.duration}
+                  </span>
+                </div>
+                <h3 className="font-display text-3xl md:text-4xl text-ink mb-4 group-hover:text-gold transition-colors max-w-md">
+                  {vortragService.title}
+                </h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed max-w-xl">
+                  {vortragService.short}
+                </p>
+              </div>
+              <div className="mt-8 flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-gold/30">
+                <div>
+                  <div className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground">
+                    Honorar
+                  </div>
+                  <div className="font-display text-xl text-ink mt-1">
+                    {vortragService.price}
+                  </div>
+                </div>
+                <span className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-teal group-hover:translate-x-1 transition-transform">
+                  Vortrag anfragen →
+                </span>
+              </div>
+            </motion.button>
           </div>
         </div>
       </section>
