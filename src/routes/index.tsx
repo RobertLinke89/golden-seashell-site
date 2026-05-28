@@ -15,6 +15,12 @@ import mountainsMist from "@/assets/mountains-mist.jpg";
 import mariaPortrait from "@/assets/maria-portrait.jpg";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    links: [
+      { rel: "preload", as: "image", href: heroLake, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: mariaPortrait, fetchpriority: "low" },
+    ],
+  }),
   component: Index,
 });
 
@@ -33,6 +39,15 @@ function Index() {
 
       {/* HERO */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <img
+          src={heroLake}
+          alt=""
+          fetchPriority="high"
+          loading="eager"
+          decoding="async"
+          aria-hidden="true"
+          className="absolute inset-0 w-full h-full object-cover -z-10 opacity-0"
+        />
         <div
           className="absolute inset-0 parallax-bg"
           style={{
@@ -97,6 +112,7 @@ function Index() {
               height={1024}
               className="w-full aspect-[4/5] object-cover rounded-sm shadow-[var(--shadow-elegant)]"
               loading="lazy"
+              decoding="async"
             />
           </motion.div>
 
