@@ -57,7 +57,7 @@ function Index() {
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
           <motion.div initial="hidden" animate="show" variants={fadeUp}>
             <div className="eyebrow mb-6">Maria Fabijenna · Energetische Heilerin</div>
-            <h1 className="font-display text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-ink">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl leading-[1.15] text-ink">
               Energetische Heilarbeit für Menschen,<br />
               <span className="italic text-gold">die wieder in Freude, Fülle und Leichtigkeit das Leben erfahren wollen.</span>
             </h1>
