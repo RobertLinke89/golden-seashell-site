@@ -58,13 +58,9 @@ function Index() {
           <motion.div initial="hidden" animate="show" variants={fadeUp}>
             <div className="eyebrow mb-6">Maria Fabijenna · Energetische Heilerin</div>
             <h1 className="font-display text-5xl sm:text-6xl md:text-7xl leading-[1.05] text-ink">
-              Wo das Alte gehen darf,<br />
-              <span className="italic text-gold">beginnt dein neues Leben.</span>
+              Energetische Heilarbeit für Menschen,<br />
+              <span className="italic text-gold">die wieder in Freude, Fülle und Leichtigkeit das Leben erfahren wollen.</span>
             </h1>
-            <p className="mt-8 text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-              Energetische Heilarbeit für Menschen, die ganzheitlich heilen möchten —
-              körperlich, geistig und seelisch.
-            </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3 justify-center">
               <button
                 onClick={() => setBooking(true)}
@@ -81,11 +77,10 @@ function Index() {
             </div>
             <div className="mt-14 flex items-center justify-center gap-6 text-xs text-muted-foreground">
               <div className="flex items-center gap-2">
-                <span className="text-gold">★★★★★</span>
-                <span>5,0 · über 120 Sitzungen</span>
+                <span>5+ Jahre Erfahrung</span>
               </div>
               <span className="hidden sm:inline">·</span>
-              <span className="hidden sm:inline">Persönlich & Online</span>
+              <span className="hidden sm:inline">300+ Begleitungen</span>
             </div>
           </motion.div>
         </div>
@@ -139,12 +134,18 @@ function Index() {
                 möchtest — ich helfe dir, das Alte loszulassen und dein Leben auf die
                 nächste Stufe zu heben.
               </p>
+              <p>
+                Bei einer Energetischen Heilsession mit mir, darfst du wahre Wunder erleben —
+                Themen und Trigger die dich vielleicht schon dein ganzes Leben begleiten,
+                dürfen sich auflösen, dein Energiefluss wird dadurch freier und dir stehen
+                automatisch mehr positive Energien wie Liebe, Freude, Fülle und Lebensenergie
+                zur Verfügung.
+              </p>
             </div>
-            <div className="mt-8 grid grid-cols-3 gap-6">
+            <div className="mt-8 grid grid-cols-2 gap-6">
               {[
-                { k: "8+", v: "Jahre Erfahrung" },
-                { k: "120+", v: "Begleitungen" },
-                { k: "5,0", v: "Bewertung" },
+                { k: "5+", v: "Jahre Erfahrung" },
+                { k: "300+", v: "Begleitungen" },
               ].map((s) => (
                 <div key={s.v}>
                   <div className="font-display text-3xl text-gold">{s.k}</div>
@@ -177,7 +178,7 @@ function Index() {
               „{testimonials[0].text}"
             </blockquote>
             <figcaption className="mt-8 text-sm tracking-[0.22em] uppercase text-muted-foreground">
-              {testimonials[0].name} · {testimonials[0].location} · {testimonials[0].topic}
+              {testimonials[0].topic}
             </figcaption>
           </motion.figure>
         </div>
@@ -301,7 +302,7 @@ function Index() {
             </h2>
             <div className="gold-divider my-6" />
             <p className="text-muted-foreground">
-              Über 120 Menschen haben ihren Weg mit mir begonnen. Hier sind einige ihrer
+              Über 300 Menschen haben ihren Weg mit mir begonnen. Hier sind einige ihrer
               Worte.
             </p>
           </motion.div>
@@ -321,9 +322,8 @@ function Index() {
                   „{t.text}"
                 </blockquote>
                 <figcaption className="mt-6 pt-5 border-t border-border/60">
-                  <div className="text-sm text-foreground">{t.name}</div>
                   <div className="text-xs text-muted-foreground mt-0.5">
-                    {t.location} · {t.topic}
+                    {t.topic}
                   </div>
                 </figcaption>
               </motion.figure>
@@ -406,7 +406,7 @@ function Index() {
               „{testimonials[1].text}"
             </blockquote>
             <figcaption className="mt-8 text-sm tracking-[0.22em] uppercase text-muted-foreground">
-              {testimonials[1].name} · {testimonials[1].location} · {testimonials[1].topic}
+              {testimonials[1].topic}
             </figcaption>
           </motion.figure>
         </div>
@@ -470,8 +470,7 @@ function Index() {
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <div className="font-display text-xl text-ink">Maria Fabijenna</div>
           <div className="flex items-center gap-2">
-            <span className="text-gold">★★★★★</span>
-            <span>5,0 — vertrauensvoll & sanft begleitet</span>
+            <span>5+ Jahre Erfahrung · 300+ Begleitungen</span>
           </div>
           <div className="text-xs">© {new Date().getFullYear()} · Alle Rechte vorbehalten</div>
         </div>

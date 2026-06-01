@@ -14,7 +14,7 @@ export function TestimonialMarquee() {
             <span className="text-sm text-foreground italic max-w-[420px] truncate">
               „{t.text.slice(0, 80)}…"
             </span>
-            <span className="text-xs text-muted-foreground">— {t.name}, {t.location}</span>
+            <span className="text-xs text-muted-foreground">— {t.topic}</span>
           </div>
         ))}
       </div>
