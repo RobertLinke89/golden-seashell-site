@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Nav } from "@/components/site/Nav";
@@ -466,11 +466,16 @@ function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border py-12 px-6">
+      <footer className="border-t border-border py-12 px-6 bg-accent/5">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-sm text-muted-foreground">
           <div className="font-display text-xl text-ink">Maria Fabijenna</div>
-          <div className="flex items-center gap-2">
-            <span>5+ Jahre Erfahrung · 300+ Begleitungen</span>
+          <div className="flex flex-wrap items-center gap-6">
+            <Link to="/impressum" className="hover:text-foreground transition-colors">
+              Impressum
+            </Link>
+            <Link to="/datenschutz" className="hover:text-foreground transition-colors">
+              Datenschutz
+            </Link>
           </div>
           <div className="text-xs">© {new Date().getFullYear()} · Alle Rechte vorbehalten</div>
         </div>
