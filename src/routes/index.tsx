@@ -51,7 +51,7 @@ function Index() {
         <div
           className="absolute inset-0 parallax-bg"
           style={{
-            backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.55) 60%, rgba(255,255,255,0.95) 100%), url(${heroLake})`,
+            backgroundImage: `linear-gradient(180deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.98) 100%), url(${heroLake})`,
           }}
         />
         <div className="relative z-10 max-w-4xl mx-auto px-6 text-center pt-20">
@@ -75,7 +75,7 @@ function Index() {
                 Leistungen entdecken
               </a>
             </div>
-            <div className="mt-14 flex items-center justify-center gap-6 text-xs text-muted-foreground">
+            <div className="mt-14 flex items-center justify-center gap-6 text-xs text-ink/75 font-medium">
               <div className="flex items-center gap-2">
                 <span>5+ Jahre Erfahrung</span>
               </div>
