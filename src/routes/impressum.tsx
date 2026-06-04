@@ -14,11 +14,19 @@ export const Route = createFileRoute("/impressum")({
 });
 
 function Impressum() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
   const [contactOpen, setContactOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const subject = encodeURIComponent("Kontaktanfrage: " + name);
+    const body = encodeURIComponent(
+      `Name: ${name}\nE-Mail: ${email}\n\nAnliegen:\n${message}`
+    );
+    window.location.href = `mailto:mariafabijenna@gmx.de?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
 
@@ -170,6 +178,8 @@ function Impressum() {
                 <label className="text-xs uppercase tracking-[0.1em] text-muted-foreground font-medium">Dein Name</label>
                 <input
                   required
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Maria Schmidt"
                   className="w-full bg-background border border-border rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-gold transition-colors"
                 />
@@ -179,6 +189,8 @@ function Impressum() {
                 <input
                   required
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="beispiel@domain.de"
                   className="w-full bg-background border border-border rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-gold transition-colors"
                 />
@@ -187,6 +199,8 @@ function Impressum() {
                 <label className="text-xs uppercase tracking-[0.1em] text-muted-foreground font-medium">Deine Nachricht</label>
                 <textarea
                   required
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
                   placeholder="Worum geht es dir?"
                   rows={4}
                   className="w-full bg-background border border-border rounded-sm px-4 py-2.5 text-sm focus:outline-none focus:border-gold transition-colors resize-none"

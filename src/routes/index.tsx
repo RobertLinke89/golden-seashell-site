@@ -32,6 +32,18 @@ const fadeUp = {
 function Index() {
   const [openService, setOpenService] = useState<Service | null>(null);
   const [booking, setBooking] = useState(false);
+  const [contactName, setContactName] = useState("");
+  const [contactEmail, setContactEmail] = useState("");
+  const [contactMessage, setContactMessage] = useState("");
+
+  const handleContactSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const subject = encodeURIComponent("Kontaktanfrage: " + contactName);
+    const body = encodeURIComponent(
+      `Name: ${contactName}\nE-Mail: ${contactEmail}\n\nAnliegen:\n${contactMessage}`
+    );
+    window.location.href = `mailto:mariafabijenna@gmx.de?subject=${subject}&body=${body}`;
+  };
 
   return (
     <div id="top" className="bg-background text-foreground">
@@ -426,25 +438,28 @@ function Index() {
           </p>
 
           <form
-            onSubmit={(e) => {
-              e.preventDefault();
-              setBooking(true);
-            }}
+            onSubmit={handleContactSubmit}
             className="mt-10 grid sm:grid-cols-2 gap-4 text-left"
           >
             <input
               required
+              value={contactName}
+              onChange={(e) => setContactName(e.target.value)}
               placeholder="Dein Name"
               className="bg-background border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
             />
             <input
               required
               type="email"
+              value={contactEmail}
+              onChange={(e) => setContactEmail(e.target.value)}
               placeholder="E-Mail-Adresse"
               className="bg-background border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors"
             />
             <textarea
               required
+              value={contactMessage}
+              onChange={(e) => setContactMessage(e.target.value)}
               placeholder="Worum geht es dir?"
               rows={4}
               className="sm:col-span-2 bg-background border border-border rounded-sm px-4 py-3 text-sm focus:outline-none focus:border-gold transition-colors resize-none"
